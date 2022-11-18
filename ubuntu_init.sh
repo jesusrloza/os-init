@@ -24,8 +24,8 @@ pip3 install -U pip notebook jupyterlab psutil openpyxl youtube-dl
 pip3 install -U numpy pandas scikit-learn matplotlib seaborn nltk beautifulsoup4
 
 # GUI and quality of life programs
-sudo nala install ffmpeg youtube-dl -y
-sudo nala install timeshift keepassxc transmission mpv celluloid gimp -y
+sudo nala install timeshift keepassxc transmission meld remmina -y
+sudo nala install mpv celluloid gimp ffmpeg youtube-dl -y
 
 # Installing NVM's latest nodejs lts (https://github.com/nvm-sh/nvm)
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
