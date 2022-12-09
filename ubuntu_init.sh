@@ -38,13 +38,14 @@ npm i -g tldr
 
 # Snaps
 sudo snap install brave
-sudo snap install chromium
 sudo snap install code --classic
 sudo snap install cpufetch
+sudo snap install discord
 sudo snap install emote
 sudo snap install firefox
 sudo snap install postman
 sudo snap install signal-desktop
+sudo snap install telegram-desktop
 sudo snap install zoom-client
 
 # Fonts

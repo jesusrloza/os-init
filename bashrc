@@ -23,6 +23,8 @@
     alias c="git commit -m "
     alias a='git add . && git status --short'
     alias l='git log --oneline --all --graph --decorate'
+    alias altl='git log --all --graph --abbrev-commit --decorate --date=relative \
+    	--format=format:"%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)"'
     alias gb='git fetch && git checkout '
     alias undo='git checkout --'
     alias reset-h='git reset --hard HEAD~1'
