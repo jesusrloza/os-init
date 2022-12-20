@@ -15,7 +15,7 @@ source ~/.bashrc
 sudo nala install gnome-shell-extension-prefs gnome-tweaks dconf-editor -y
 
 # CLI programs
-sudo nala install git neovim neofetch ranger htop curl tree -y
+sudo nala install git neovim neofetch ranger htop curl tree p7zip-full p7zip-rar -y
 sudo nala install openssl qrencode poppler-utils -y
 sudo nala install python3 python3-pip sqlite3 jupyter -y
 
@@ -42,11 +42,19 @@ sudo snap install code --classic
 sudo snap install cpufetch
 sudo snap install discord
 sudo snap install emote
-sudo snap install firefox
 sudo snap install postman
 sudo snap install signal-desktop
 sudo snap install telegram-desktop
-sudo snap install zoom-client
+
+# Flatpak
+sudo nala install flatpak
+  # sudo nala install gnome-software-plugin-flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+ 
+flatpak install flathub com.github.phase1geo.minder # Minder
+flatpak install flathub com.github.tenderowl.frog   # Frog
+flatpak install flathub nl.hjdskes.gcolor3          # Color Picker
+flatpak install flathub us.zoom.Zoom                # Zoom
 
 # Fonts
 sudo add-apt-repository multiverse
@@ -72,3 +80,6 @@ echo \
 ## Install Docker Engine
 sudo nala update -y
 sudo nala install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
+
+
+echo "Please reboot your system"
