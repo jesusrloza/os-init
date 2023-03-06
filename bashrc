@@ -20,11 +20,11 @@
     alias push='git push origin $(git rev-parse --abbrev-ref HEAD)'
     alias pull='git pull --recurse-submodules origin $(git rev-parse --abbrev-ref HEAD)'
     alias s="git status --short"
-    alias c="git commit -m "
     alias a='git add . && git status --short'
-    alias l='git log --oneline --all --graph --decorate'
-    alias altl='git log --all --graph --abbrev-commit --decorate --date=relative \
-        --format=format:"%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)"'
+    alias c="git commit -m "
+    alias altl='git log --oneline --all --graph --decorate'
+    alias l='git log --all --graph --date=relative \
+    	--format=format:"%C(bold blue)%h%C(reset) - %C(bold green)(%ad)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)"'
     alias gb='git fetch && git checkout '
     alias undo='git checkout --'
     alias reset-h='git reset --hard HEAD~1'
@@ -41,10 +41,9 @@
     alias dcc='sudo docker-compose down -v --remove-orphans'
     # alias dcb='sudo docker-compose up --build -d'
     
-    alias nr='npm run'
-    alias nrs='npm run start'
-    alias nrb='npm run build'
-    alias npi='npm install'
+    alias nr='pnpm run'
+    alias ni='pnpm install'
+    alias d='pnpm run test:debug'
 
 # Show branch name if cwd is a git project
     parse_git_branch() {
@@ -53,7 +52,8 @@
 
 # Export personal variables
     export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\[\e[01;33m\]$(parse_git_branch)\[\033[00m\]\$ '
-    export EDITOR=/usr/bin/nvim
+    export EDITOR=/usr/local/bin/nvim       # if built from source
+    # export EDITOR=/usr/bin/nvim           # if apt installed
     export SSH_PRIVATE_KEY=$(cat ~/.ssh/parlevel-deployment-key) &> /dev/null
 
 # SSH Prep for personal and work repos
@@ -66,3 +66,8 @@
     # export NVM_DIR="$HOME/.nvm"
     # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
     # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# pnpm
+    # export PNPM_HOME="/home/jesusrloza/.local/share/pnpm"
+    # export PATH="$PNPM_HOME:$PATH"
+# pnpm end
