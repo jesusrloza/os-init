@@ -41,20 +41,39 @@
   pnpm add -g lite-server
 
 # Snaps
-  # sudo snap install brave
-  # sudo snap install code --classic
+  sudo snap install code --classic
   # sudo snap install cpufetch
-  # sudo snap install discord
   # sudo snap install emote
   # sudo snap install postman
   # sudo snap install signal-desktop
-  # sudo snap install telegram-desktop
+
+# vs code config
+  code --install-extension aaron-bond.better-comments
+  code --install-extension christian-kohler.path-intellisense
+  code --install-extension dbaeumer.vscode-eslint
+  code --install-extension dracula-theme.theme-dracula
+  code --install-extension eamodio.gitlens
+  code --install-extension esbenp.prettier-vscode
+  code --install-extension GitHub.github-vscode-theme
+  code --install-extension GrapeCity.gc-excelviewer
+  code --install-extension johnpapa.vscode-peacock
+  code --install-extension mintlify.document
+  code --install-extension ms-edgedevtools.vscode-edge-devtools
+  code --install-extension ms-vsliveshare.vsliveshare
+  code --install-extension PKief.material-icon-theme
+  code --install-extension redhat.vscode-yaml
+  code --install-extension tomoki1207.pdf
+  code --install-extension wmaurer.change-case
+
+  mkdir -p ~/.config/Code/User
+  cat ./code_settings.json > ~/.config/Code/User/settings.json
+  cat ./code_keybindings.json > ~/.config/Code/User/keybindings.json
+
 
 # Flatpak
   sudo nala install flatpak
-  # sudo nala install gnome-software-plugin-flatpak     # optional gnome-software integration
-
   flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
   # flatpak install flathub com.github.phase1geo.minder # Minder
   # flatpak install flathub com.github.tenderowl.frog   # Frog
   # flatpak install flathub nl.hjdskes.gcolor3          # Color Picker

@@ -1,4 +1,3 @@
-
 ### User specific aliases and functions ###
 # Some useful aliases - jesusrloza
     alias py='python3'
@@ -24,7 +23,7 @@
     alias c="git commit -m "
     alias altl='git log --oneline --all --graph --decorate'
     alias l='git log --all --graph --date=relative \
-    	--format=format:"%C(bold blue)%h%C(reset) - %C(bold green)(%ad)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)"'
+	--format=format:"%C(bold blue)%h%C(reset) - %C(bold green)(%ad)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)"'
     alias gb='git fetch && git checkout '
     alias undo='git checkout --'
     alias reset-h='git reset --hard HEAD~1'
