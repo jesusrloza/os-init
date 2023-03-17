@@ -33,6 +33,8 @@
     alias friday='pull && git commit -a -m "[WIP] Lastest changes from Friday" && push'
     alias changes='git diff --'
     alias nomerge='git merge --abort'
+    alias dynamo-local='cd ~/db/dynamo/dynamodb_local_latest ; java \
+	    -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb'
     
     alias dp='sudo docker ps'
     alias dcu='sudo docker-compose up'

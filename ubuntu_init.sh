@@ -42,8 +42,9 @@
 
 # Snaps
   sudo snap install code --classic
-  # sudo snap install cpufetch
-  # sudo snap install emote
+  sudo snap install aws-cli --classic
+  sudo snap install cpufetch
+  sudo snap install emote
   # sudo snap install postman
   # sudo snap install signal-desktop
 
@@ -71,8 +72,8 @@
 
 
 # Flatpak
-  sudo nala install flatpak
-  flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+  # sudo nala install flatpak
+  # flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
   # flatpak install flathub com.github.phase1geo.minder # Minder
   # flatpak install flathub com.github.tenderowl.frog   # Frog
