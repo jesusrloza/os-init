@@ -72,8 +72,8 @@
 
 
 # Flatpak
-  # # sudo nala install flatpak
-  # # flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+  # sudo nala install flatpak
+  # flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
   # flatpak install flathub com.github.phase1geo.minder # Minder
   # flatpak install flathub com.github.tenderowl.frog   # Frog
