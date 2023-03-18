@@ -4,19 +4,19 @@
   sudo apt update -y && sudo apt install nala
 
 # Remove unnecesary software and update/upgrade
-  sudo nala remove --purge shotwell rhythmbox totem thunderbird gnome-todo deja-dup seahorse -y
+  sudo nala remove --purge totem seahorse -y
   sudo nala upgrade -y
 
 # Append my bashrc configurations
   cat ./bashrc >> ~/.bashrc
-  source ~/.bashrc
 
 # GNOME config
-  sudo nala install gnome-shell-extension-prefs gnome-tweaks dconf-editor -y
+  sudo nala install gnome-tweaks dconf-editor -y
 
 # CLI programs
-  sudo nala install git neofetch ranger htop curl tree p7zip-full p7zip-rar -y
+  sudo nala install git vim neofetch ranger htop curl tree p7zip-full p7zip-rar -y
   sudo nala install openssl qrencode poppler-utils -y
+  sudo nala install awscli openjdk-19-jre-headless -y
   sudo nala install python3 python3-pip sqlite3 jupyter -y
 
 # Pip
@@ -26,6 +26,8 @@
 # GUI and quality of life programs
   sudo nala install timeshift keepassxc transmission meld remmina -y
   sudo nala install mpv celluloid gimp ffmpeg youtube-dl -y
+  sudo nala install yaru-theme-gnome-shell yaru-theme-gtk yaru-theme-icon yaru-theme-sound -y
+
 
 # Installing NVM's latest nodejs lts (https://github.com/nvm-sh/nvm)
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
@@ -34,19 +36,12 @@
   nvm alias default lts/*
 
 # pnpm setup and global programs
+  npm i -g pnpm
   pnpm setup
   source ~/.bashrc
 
   pnpm add -g tldr          # TLDR pages (https://github.com/tldr-pages/tldr)
   pnpm add -g lite-server
-
-# Snaps
-  sudo snap install code --classic
-  sudo snap install aws-cli --classic
-  sudo snap install cpufetch
-  sudo snap install emote
-  # sudo snap install postman
-  # sudo snap install signal-desktop
 
 # vs code config
   code --install-extension aaron-bond.better-comments
@@ -72,13 +67,11 @@
 
 
 # Flatpak
-  # # sudo nala install flatpak
-  # # flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
-  # flatpak install flathub com.github.phase1geo.minder # Minder
-  # flatpak install flathub com.github.tenderowl.frog   # Frog
-  # flatpak install flathub nl.hjdskes.gcolor3          # Color Picker
-  # flatpak install flathub us.zoom.Zoom                # Zoom
+  flatpak install flathub nl.hjdskes.gcolor3          # Color Picker
+  flatpak install flathub com.github.tenderowl.frog   # Frog
+  flatpak install flathub com.github.phase1geo.minder # Minder
+  flatpak install flathub org.signal.Signal           # Signal
+  flatpak install flathub us.zoom.Zoom                # Zoom
 
 # Fonts
   sudo add-apt-repository multiverse
