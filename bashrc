@@ -21,30 +21,28 @@
     alias s="git status --short"
     alias a='git add . && git status --short'
     alias c="git commit -m "
-    alias altl='git log --oneline --all --graph --decorate'
     alias l='git log --all --graph --date=relative \
-	--format=format:"%C(bold blue)%h%C(reset) - %C(bold green)(%ad)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)"'
-    alias gb='git fetch && git checkout '
-    alias undo='git checkout --'
-    alias reset-h='git reset --hard HEAD~1'
-    # alias reset='git reset --hard HEAD~1'
-    alias clean='git clean -dnx'
+	    --format=format:"%C(bold blue)%h%C(reset) - %C(bold green)(%ad)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)"'
+
     alias branch='git checkout -b'
-    alias friday='pull && git commit -a -m "[WIP] Lastest changes from Friday" && push'
     alias changes='git diff --'
+    alias clean='git clean -dnx'
+    alias gb='git fetch && git checkout '
     alias nomerge='git merge --abort'
+    alias undo='git checkout --'
+
     alias dynamo-local='cd ~/db/dynamo/dynamodb_local_latest ; java \
 	    -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb'
     
     alias dp='sudo docker ps'
     alias dcu='sudo docker-compose up'
     alias dcd='sudo docker-compose down'
-    alias dcc='sudo docker-compose down -v --remove-orphans'
-    # alias dcb='sudo docker-compose up --build -d'
     
     alias nr='pnpm run'
     alias ni='pnpm install'
-    alias d='pnpm run test:debug'
+
+    alias cz-init='commitizen init cz-conventional-changelog --pnpm --save-dev --save-exact'
+    alias ts-react-app='pnpx create-react-app "$1" --template typescript'
 
 # Show branch name if cwd is a git project
     parse_git_branch() {
@@ -52,10 +50,10 @@
     }
 
 # Export personal variables
-    export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\[\e[01;33m\]$(parse_git_branch)\[\033[00m\]\$ '
-    export EDITOR=/usr/local/bin/nvim       # if built from source
-    # export EDITOR=/usr/bin/nvim           # if apt installed
     export SSH_PRIVATE_KEY=$(cat ~/.ssh/parlevel-deployment-key) &> /dev/null
+    export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\[\e[01;33m\]$(parse_git_branch)\[\033[00m\]\$ '
+    # export EDITOR=/usr/local/bin/nvim       # if built from source
+    # export EDITOR=/usr/bin/nvim           # if apt installed
 
 # SSH Prep for personal and work repos
     eval `ssh-agent` &> /dev/null
