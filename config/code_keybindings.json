@@ -28,11 +28,6 @@
     "command": "workbench.action.terminal.kill"
   },
   {
-    "key": "alt+[Period]",
-    "command": "docs.write",
-    "when": "editorTextFocus && editorLangId =~ /typescript|javascript|python|php|java|c|cpp|csharp|dart|ruby|go|rust/"
-  },
-  {
     "key": "ctrl+alt+\\",
     "command": "github.copilot.generate",
     "when": "editorTextFocus && github.copilot.activated && !inInteractiveInput && !interactiveEditorFocused"
